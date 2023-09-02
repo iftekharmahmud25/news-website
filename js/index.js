@@ -21,6 +21,7 @@ const handleLoadNews = async(categoryId) =>{
 
      const response = await fetch(`https://openapi.programming-hero.com/api/news/category/${categoryId}`)
      const data = await response.json();
+     
     const cardContainer = document.getElementById('card-container');
     cardContainer.innerHTML = '';
 
@@ -28,7 +29,7 @@ const handleLoadNews = async(categoryId) =>{
         console.log(news)
          const div = document.createElement('div');
          div.innerHTML = `
-         <div class="card w-96 bg-base-100 shadow-xl">
+         <div class="card  bg-base-100 shadow-xl">
           <figure>
             <img
               src=${news.image_url}
